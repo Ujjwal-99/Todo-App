@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    <title>Sign in</title>
+</head>
+<body >
+    <!-- <div class="container w-100%"> 
+        <div class="row m-t-5">
+        <div class="col-12  ">    
+        <form action="" class="m-t-5">
+            <div class="d-flex  justify-content-center">
+            <span class="p-e-3"><label for="flostinginput">Email</label></span>            
+            <span class="px-3 ">
+                <input type="text" placeholder="name@gmail.com" >
+            </span>
+            </div>
+            <div class="d-flex justify-content-center py-2">
+            <span class="px-3">
+                <label for="floatinginput">Password</label>
+            </span>
+            <span class="padding-left-10px ">
+                <input type="password" placeholder="password">
+            </span>
+           </div>
+            <div class="d-flex justify-content-center px-3 p-t-3">
+                <input type="checkbox" class=""><span class="px-1">Remember me</span>
+            </div>
+            <div class="d-flex justify-content-center py-1 ">
+                <button class="w-60 btn btn-lg btn-primary" type="submit">Log in</button>
+            </div>
+        </form>
+        </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <button class="w-20 btn btn-lg " type="submit">Sign up</button>
+            </div>
+        </div>
+    </div> -->
+
+    <!-- <div class="container-fluid d-flex justify-content-center align-items-center h-100vh m" >
+        
+         
+            <div class=" border border-1 rounded bg-white me-5 mt-5 mx-5 h-100 my-5 px-2">
+                <form action="">
+                    <div>
+                        <h1 class="d-flex justify-content-center">Registration Form</h1>
+                    </div>
+                    <div class="d-flex justify-content-center pt-3 mt-3 ">
+                        <label for="inputEmail4" class="form-label pe-5">Email</label>
+                        <input type="email" class=" " >
+                    </div>
+                    <div class="d-flex justify-content-center pt-2">
+                        <label for="inputname" class="form-label pe-3">Username</label>
+                        <input type="email" class="" id="inputEmail4">
+                    </div>
+                    <div class="d-flex justify-content-center pt-2">
+                        <label for="floatingpassword" class="form-label pe-3">Password</label>
+                        <input type="email" class="" id="inputEmail4">
+                    </div>
+                    <div class="d-flex justify-content-center ps-4 pt-3 mb-4">
+
+                        <h6 class="mb-2 pb-1 me-2">Gender: </h6>
+      
+                        <div class="form-check form-check-inline ">
+                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="femaleGender"
+                            value="option1" checked />
+                          <label class="form-check-label" for="femaleGender">Female</label>
+                        </div>
+      
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="maleGender"
+                            value="option2" />
+                          <label class="form-check-label" for="maleGender">Male</label>
+                        </div>
+      
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="otherGender"
+                            value="option3" />
+                          <label class="form-check-label" for="otherGender">Other</label>
+                        </div>
+      
+                      </div>
+                   
+                    <div class="form-check d-flex justify-content-center pt-3 mb-4 pb-2">
+                        <input class="form-check-input me-3" type="checkbox" value="" id="form2Example3c" />
+                        <label class="form-check-label " for="form2Example3">
+                          I do accept the <a href="#!" class=""><u>Terms and Conditions</u></a> of your
+                          site.
+                        </label>
+                      </div>
+                    <div class="d-flex justify-content-center  pt-4">
+                    
+                    <button class="w-20 btn btn-lg btn-primary me-3 mb-4" type="submit">Sign up</button>
+                    <button class="w-20 btn btn-lg btn-primary ms-3 mb-4" type="submit">Sign in</button>
+                    
+                    </div>
+                </form>
+              </div>
+          
+         
+        
+    </div> -->
+
+<div class="container">
+          <div class="row">
+            <div class="col-lg-12 col-md-8">
+                <div class="header ">
+                    <p class="h1 text-start mt-3 mb-4 pb-3 text-primary">
+                        <i class="fas fa-check-square me-1"></i>
+                        <u>My Todo-s</u>
+                      </p>
+                    <div class="input-group mt-5 mb-3 d-flex">
+                        <input type="text" class="form-control" placeholder="TasK" aria-label="Recipient's username" aria-describedby="basic-addon2"
+                        id="addTask">
+                        <span class="input-group-text p-0" id="basic-addon2 "><button class="px-3 m-0" id="addTaskBtn" > Submit</button></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+ 
+         <div class="row bg-purple:  #6f42c1;    ">
+            <div class="col-12 border border-1 py-3 bg-white ">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-flex flex-row ">
+                          <li class="nav-item sortLink px-2 my-1 me-3 border border-1 border-primary">
+                            <a class="nav-link active lists text-primary"  href="#">All Task</a>
+                          </li>
+                          <li class="nav-item sortLink px-2 my-1 me-3 border border-1 border-primary">
+                            <a class="nav-link lists text-primary " href="#">Pending</a>
+                          </li>
+                          <li class="nav-item sortLink text-primary border border-1 border-primary px-2 my-1">
+                            <a class="nav-link lists " href="#">Completed</a>
+                          </li>
+                        </ul>
+                        <ul id="taskList">
+                         
+                      
+                        </ul>
+                            
+            </div>
+                       
+        </div>  
+            
+ </div> 
+
+    <script src="/firebase.js"></script>
+    <script src="/index.js"></script>
+</body>
+</html>
+
+
