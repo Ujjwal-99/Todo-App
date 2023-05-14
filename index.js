@@ -58,9 +58,9 @@ function generateItems(items) {
     let tasks ='';
     items.forEach((item) => {
         let Status = item.Status === 'completed' ? 'checked' : '';
-        tasks += `<li id="${item.id}" class="input-group mt-5 mb-3 d-flex justify-content-between align-items-center border border-bottom border-1 ">
+        tasks += `<li id="${item.id}" class="input-group mt-5 mb-3 d-flex justify-content-between align-items-center border border-bottom border-1 px-2 py-2">
         <div class="d-flex ">
-        <input type="checkbox" name="" id="checkbox"
+        <input type="checkbox" name="" id="checkbox" 
         ${Status}>
         <label type="checkbox" class=" px-3 " >${item.text}</label>
         </div> 
@@ -68,6 +68,13 @@ function generateItems(items) {
       </li>`;
     });
     document.querySelector('#taskList').innerHTML = tasks ;
+    let checkbox = document.querySelectorAll('#checkbox');
+	checkbox.forEach((item) => {
+		let task = item.nextElementSibling;
+		if (item.checked === true) {
+			task.classList.add('text-decoration-line-through');
+		}
+	});
     todoStatusScan();
     deleteTask();
 };
